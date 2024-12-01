@@ -4,49 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <script>
-    function register(){
-        var first=document.getElementById('first').value;
-        var last=document.getElementById('last').value;
-        var number=Number(document.getElementById('number').value);
-        var email=document.getElementById('email').value;
-        var password=document.getElementById('password').value;
-    
-        if(first=='' && last==''){
-            document.write("please enter your name");
-            return;
-        }
-    
-        var numberpattern=/^[0-9]+&/;
-        if(!numberpattern.match(number) && number==''){
-            document.write("Please enter valid number");
-            return;
-        }
-
-        var emailpattern=/^[a-zA-z]+[0-9]/;
-        if(!emailpattern.match(email) && email==''){
-        document.write("please enter valid email");
-        return;
-        }
-
-        var passwordpattern=/^[a-zA-z]/
-        if(!passwordpattern.match(passsword) && password==''){
-            document.write("please enter valid password");
-            return;
-        }
-    }
-</script>
+    <script src="signup.js"></script>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
     <div class="signup-form">
-    <form action="">
-    First Name: <input type="text" name="first" id="first"><br><br>
-    Last Name: <input type="text" name="last" id="last"><br><br>
-    Number: <input type="text" name="number" id="number"><br><br>
-    Email: <input type="email" name="email" id="email"><br><br>
-    Password: <input type="password" name="password" id="password"><br><br>
-</form>
-<button onclick="register()">Signup</button>
-</div>
+        <form action="">
+            First Name: <input type="text" name="first" id="first"><br><br>
+            Last Name: <input type="text" name="last" id="last"><br><br>
+            Number: <input type="text" name="number" id="number"><br><br>
+            Email: <input type="email" name="email" id="email"><br><br>
+            Password: <input type="password" name="password" id="password"><br><br>
+        </form>
+        <button onclick="register()">Signup</button>
+        <div id="error-messages" style="color: red;"></div>
+    </div>
 </body>
 </html>
